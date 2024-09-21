@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+Food Product Explorer Application
+This project is a React.js application that provides an interface to explore food products using the OpenFoodFacts API. The application allows users to search for products by name and barcode, filter products by category, sort them, and view detailed product information.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Method Used to Solve the Problem
+1. Understanding the Requirements
+The problem required building an application that retrieves and displays product data from the OpenFoodFacts API, with functionalities like searching, filtering, sorting, and viewing detailed information about products.
+Additionally, the application needed to handle CORS restrictions, allow users to search by barcode, and be responsive to different screen sizes.
+2. Breaking Down the Problem
+I broke down the solution into key components:
+ProductList: Displays a list of products.
+ProductDetailPage: Displays details for a selected product.
+SearchBar: Allows users to search for products by name and barcode.
+CategoryFilter: Enables users to filter products by category.
+SortOptions: Allows users to sort products alphabetically (A-Z or Z-A).
+Cart: Allows users to add products to the cart and view them.
+Navigation between pages was handled using React Router to ensure a smooth transition between the product list and product detail pages.
+3. Implementation Steps
+Initial Setup: Set up a React project with the necessary components and routing for navigation between the product list and product detail pages.
+Fetching Product Data: Used Axios to fetch data from the OpenFoodFacts API.
+Handled CORS issues by using a CORS proxy (https://cors-anywhere.herokuapp.com/).
+Cached API responses to avoid hitting the API rate limit (429 Too Many Requests error).
+Search by Name and Barcode: Implemented the SearchBar component to allow users to search products either by name or by entering a barcode.
+Category Filtering and Sorting: Built CategoryFilter and SortOptions components to enable filtering and sorting of products based on user input.
+Product Detail Page: Created a separate page for displaying detailed information about the product (ingredients, nutrition grade, etc.).
+Included a "Back to Home" button for easy navigation back to the product list.
+Responsiveness: Ensured that the layout was responsive by using CSS Flexbox, allowing the app to be used seamlessly on both desktop and mobile devices.
+4. Testing and Debugging
+Tested the application by searching for products by name and barcode.
+Ensured that navigating between the product list and product detail pages worked smoothly.
+Debugged issues related to CORS, API rate limits, and loading states on the product detail page.
+5. Challenges Addressed
+CORS: Bypassed CORS restrictions using a proxy.
+API Rate Limits: Cached product data to prevent excessive requests to the OpenFoodFacts API.
+Responsive Design: Made sure the application worked on various screen sizes by testing on both desktop and mobile.
+Time Taken to Complete the Assignment
+The assignment took approximately 12 hours to complete, broken down as follows:
 
-## Available Scripts
+Planning and Understanding Requirements: 2 hours
+Setting Up the Project and Components: 2 hours
+Fetching and Handling API Data: 3 hours
+Implementing Search, Filter, and Sort Features: 2 hours
+Creating Product Detail Page and Navigation: 1.5 hours
+Testing, Debugging, and Optimizing: 1.5 hours
+Running the Application
+Clone the Repository:
 
-In the project directory, you can run:
+bash
+Copy code
+git clone https://github.com/your-username/food-product-explorer.git
+Install Dependencies:
 
-### `npm start`
+bash
+Copy code
+npm install
+Run the Application:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+npm start
+Usage:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can search for products by name or barcode.
+Filter products by category and sort them alphabetically.
+Click on a product to view detailed information.
+Use the "Back to Home" button on the product detail page to return to the product list.
